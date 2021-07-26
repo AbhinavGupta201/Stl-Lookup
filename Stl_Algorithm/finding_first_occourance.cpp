@@ -17,7 +17,7 @@ int main()
     n=sizeof(arr)/sizeof(int);
 
     // in array's
-    auto it  = find(arr, arr + 7,9);
+    auto it  = find(arr, arr + n,9);
     index=it-arr;
     if(index==n)
         cout<<"element do not exist"<<endl;

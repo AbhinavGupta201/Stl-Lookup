@@ -24,7 +24,7 @@ int main()
     n = sizeof(arr) / sizeof(int);
 
     // in array's
-    auto it = lower_bound(arr, arr + 7, 19);
+    auto it = lower_bound(arr, arr + n, 19);
     if (it == arr+n)
         cout << "element do not exist" << endl;
     else

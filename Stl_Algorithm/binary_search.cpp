@@ -22,7 +22,7 @@ int main()
     n = sizeof(arr) / sizeof(int);
 
     // in array's
-    bool it = binary_search(arr, arr + 7, 9);
+    bool it = binary_search(arr, arr + n, 9);
     if (it == false)
         cout << "element is not present" << endl;
     else
