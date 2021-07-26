@@ -1,7 +1,7 @@
-# Stl-Lookup-
+# Stl-Lookup
 An overview of cpp stl library with important function for Competitive Programming.
 
-## Often stuck at the stl container function? then you are at right place. This repository covers most commonly used functions in stl container also has some very important stl algorithm.
+## Often stuck at the stl container function? then you are at right place. This repository covers most commonly used functions in stl container and also has some most used stl algorithm in cp.
 
 1. Stl
   * Array
@@ -18,7 +18,8 @@ An overview of cpp stl library with important function for Competitive Programmi
   * Unordered Map
   * List
   * Deque
-2. Stl Algorithm
+  
+2. Algorithm
   * Sort
   * Reverse
   * Accumulate
