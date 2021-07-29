@@ -11,10 +11,7 @@ using namespace std;
 // will be called from the main to solve each test case:
 void solve()
 {
-    lli a;
-    cin>>a;
-    cout<<a;
-    
+
 }
 
 int main()
