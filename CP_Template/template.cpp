@@ -2,9 +2,10 @@
 #include <bits/stdc++.h>
 using namespace std;
 
-// will be called from the main to solve the proble ;
+// will be called from the main to solve each test case:
 void solve()
 {
+
 }
 
 int main()
@@ -17,7 +18,7 @@ int main()
     cin >> t;
     while (t--)
     {
-        // solve each test case 
+        // solve for each test case 
         solve();
     }
     return 0;
