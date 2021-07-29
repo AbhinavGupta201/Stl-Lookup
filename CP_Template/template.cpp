@@ -2,10 +2,19 @@
 #include <bits/stdc++.h>
 using namespace std;
 
+// small symbol for the datatypes 
+#define lli long long int
+#define llf long long float
+#define lld long long double
+
+
 // will be called from the main to solve each test case:
 void solve()
 {
-
+    lli a;
+    cin>>a;
+    cout<<a;
+    
 }
 
 int main()
@@ -14,7 +23,7 @@ int main()
     ios_base::sync_with_stdio(false);
     cin.tie(NULL);
     // number of test cases
-    long long int t;
+    lli t;
     cin >> t;
     while (t--)
     {
