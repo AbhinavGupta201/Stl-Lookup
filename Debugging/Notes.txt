@@ -1,0 +1,25 @@
+Following technique to debugg your code:
+
+1. print debugging: In this technique print the value of the varible or container to see the correctness of the code at each line of code so that, you can see where your code is bursting.
+
+2. For Recursion: There are many time that due to some mistake our code go in infinite loop. In this case print debugg won't work since it is infinite loop so system will hang and do not print anything.
+
+    => idea: Why not stop the Recursion after the certain number of time??
+    => Explanation: Still not able to get? Don't worry i'm here to explain you! Declear a global varible to count the number of time Recursion is called. and inside the Recursion make a condition that stop the Recursion after certain number of Recursion call say 100 or 1000 and then use print debugg in the Recursion to find out where your code is wrong?
+
+3. Stress Testing: Have you ever wondered how does the problem setter come with all the test case? if not? Dont worry
+                   even  i also come to know fue days ago:)
+                
+            (i). problem setter use the rand() function to generate the all possible test cases for smaller input size and then see the corner cases in the problem.
+                --> rand(): generate a random number
+
+            Note: while using rand(): function use srand() to clear the seeding else everytime you run your code it will generate the same random test case as the previous one.
+                --> srand(time(NULL)); clear the seeding
+
+            (ii). So question is how Stress Testing is going to help in getting the corner cases, even you Dont know the optimal solution to the problem?
+            Ans: Think Carefully? Didn't you know the solution? Actually you know. Rather everyone knows. Yes bruitforce one. We are finding the optimal only because, for the given input size bruitforce will give the time limit exceed(TLE), so why Don't use the bruitforce one for smaller input size to generate the Testcases for problem to see where your optimal is not working. 
+
+            (iii). Run your optimal and bruitforce to the same randon Testcase generate from the rand function(). If they match it means that your optimal is giving output as expected and for the testcase which don't match. That's your corner case for the optimal where it is not working. just print that testcase to see the what's wrong with it.
+        
+4. Dry Run Or GCC Debugger: In this technique, dry run your code on pen and paper to see what's wrong. or You can use the in build bugger of gcc for dry run.
+
