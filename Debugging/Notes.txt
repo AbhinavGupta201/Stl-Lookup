@@ -1,6 +1,6 @@
 Following technique to debugg your code:
 
-1. print debugging: In this technique print the value of the varible or container to see the correctness of the code at each line of code so that, you can see where your code is bursting.
+1. print debugging: In this technique print the value of the varible or container to see the correctness of the code at each line of code so that, you can see where your code is cracking.
 
 2. For Recursion: There are many time that due to some mistake our code go in infinite loop. In this case print debugg won't work since it is infinite loop so system will hang and do not print anything.
 
