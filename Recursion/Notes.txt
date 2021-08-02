@@ -1,0 +1,6 @@
+Importent problem in recursion is:
+1. Rat in Maze.
+2. N-Queen.
+3. Subsequence Printing
+4. All Permutation of a string
+and many more ..
