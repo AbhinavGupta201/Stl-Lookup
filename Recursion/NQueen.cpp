@@ -14,23 +14,23 @@ typedef long double ld;
 bool isSafe(ll row, ll col, ll n, vector<vector<ll>> &vec)
 {
     // row check is safe
-    for (ll i = row - 1; i >= 0; i--)
+    for (ll i = col - 1; i >= 0; i--)
     {
-        if (vec[row][col] == 1)
+        if (vec[row][i] == 1)
             return false;
     }
 
     // check it upper diagonal
     for (ll i = row - 1, j = col - 1; i >= 0 && j >= 0; i--, j--)
     {
-        if (vec[row][col] == 1)
+        if (vec[i][j] == 1)
             return false;
     }
 
     // check in the lower diagonal
     for (ll i = row +1, j = col - 1; i<n && j >= 0; i++, j--)
     {
-        if (vec[row][col] == 1)
+        if (vec[i][j] == 1)
             return false;
     }
     return true;
@@ -48,6 +48,7 @@ void NQueen(ll col, ll n, vector<vector<ll>> &vec)
             }
             cout << endl;
         }
+        cout<<endl;
         return;
     }
     for (ll i = 0; i < n; i++)
@@ -56,6 +57,7 @@ void NQueen(ll col, ll n, vector<vector<ll>> &vec)
         {
             vec[i][col] = 1;
             NQueen(col + 1, n, vec);
+            vec[i][col] = 0;
         }
     }
 }
@@ -63,7 +65,7 @@ void solve()
 {
     ll n;
     cin >> n;
-    vector<vector<ll>> vec(n, vector<ll>(0));
+    vector<vector<ll>> vec(n, vector<ll>(n,0));
     NQueen(0, n, vec);
 }
 
