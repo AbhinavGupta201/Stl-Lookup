@@ -1,0 +1,29 @@
+{
+	"C++ Snippet": {
+		"prefix": "cp",
+		"body": [
+			"#include <bits/stdc++.h> ",
+			"using namespace std;",
+			" ",
+			"typedef long long ll;",
+			"typedef long double ld;",
+			" ",
+			"void solve(){",
+			" ",
+			"}",
+			" ",
+			"int main()",
+			"{",
+			"\tios_base::sync_with_stdio(false);",
+			"\tcin.tie(NULL);",
+			"\tll t;",
+			"\tcin >> t;",
+			"\twhile(t--){",
+			"\t\tsolve();",
+			"\t}",
+			"\treturn 0;",
+			"}"
+		],
+		"description": "C++ Snippet"
+	}
+}
