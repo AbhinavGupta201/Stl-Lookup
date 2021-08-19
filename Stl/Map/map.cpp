@@ -15,7 +15,7 @@ int main(){
     // Syntax: map<T,T> mp;
     map<string,int>mp; // empty map
     
-    // []:using this we can stor the new value if it don't exits
+    // []:using this we can store the new value if it don't exits
     mp["raj"]=20;
     mp["abhinav"]=32;
     mp["shyam"]=19;
@@ -70,14 +70,5 @@ int main(){
 
     // empty(): boolean return (true if the map is empty )
     cout<<"is empty: "<<mp.empty()<<endl;
-
-    
-
-
-
-
-
-
-
 
 }

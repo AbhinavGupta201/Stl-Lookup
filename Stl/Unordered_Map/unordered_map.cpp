@@ -13,15 +13,15 @@ Note: every syntax and function is same
 using namespace std;
 
 int main(){
-    // Syntax: map<T,T> mp;
+    // Syntax: unordered_map<T,T> mp;
     unordered_map<string,int>mp; // empty map
     
-    // []:using this we can stor the new value if it don't exits
+    // []:using this we can store the new value if it don't exits
+    // new value to the existing key will be modified 
     mp["raj"]=20;
     mp["abhinav"]=32;
     mp["shyam"]=19;
 
-    // new value to the existing key will be modified 
     // emplace(): will also insert the key value pair 
     mp.emplace("ravi",29);
     mp.emplace("satyam",31);
@@ -72,11 +72,6 @@ int main(){
     // empty(): boolean return (true if the map is empty )
     cout<<"is empty: "<<mp.empty()<<endl;
 
-    
-
-
-
-
-
+    return 0;
 
 }

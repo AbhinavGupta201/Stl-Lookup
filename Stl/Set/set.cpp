@@ -3,7 +3,7 @@ Property:
 1. Store the unique value
 2. Store in ascending order 
 3. time complexity: O(logN) :: in all cases
-4. Since it is ascendin order so it is ordered 
+4. Since it is ascending order so it is ordered 
 Header file: set
  */
 #include <set>
@@ -63,8 +63,8 @@ int main()
     // 5. size(): return the number of element if the set
     cout << "size is: " << st.size() << endl;
 
-    // 6. emplace(): insert only buy faster then insert
-    st.insert(202);
+    // 6. emplace(): insert only but faster then insert
+    st.emplace(202);
     cout << "\nset is: ";
     for (auto it : st)
     {

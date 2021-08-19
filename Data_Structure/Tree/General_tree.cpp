@@ -4,7 +4,7 @@ Property:
 2. For n vertex there is n-1 edges
 3. There is unique path between the two point u and v. 
 
-Difination: A tree is a non linear data structure in which there is a special node called root node and it's children's can be divided into n>=0 number of disjoint ordered set.
+Defination: A tree is a non linear data structure in which there is a special node called root node and it's children's can be divided into n>=0 number of disjoint ordered set.
 
 Types :
 1. Binary Tree: there will be atmost two childs for each node 

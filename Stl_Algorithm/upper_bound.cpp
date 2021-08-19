@@ -16,7 +16,7 @@ int main()
 {
     // Syntax:
     // container should be sorted
-    // lower_bound(begin_itertor, end_iterator, x);
+    // upper_bound(begin_itertor, end_iterator, x);
     // return iterator( to first element else end() iterator)
     int n,index,res;
     int arr[] = {5, 10, 13, 26, 59};

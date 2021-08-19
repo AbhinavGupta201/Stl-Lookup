@@ -22,7 +22,6 @@ int main(){
     mp.insert(pair<string,int> ("abhinav",32));
     mp.insert(pair<string,int>  ("shyam",19));
 
-    // new value to the existing key will be modified 
     // emplace(key, value): will also insert the key value pair 
     mp.emplace("raj",29);
     mp.emplace("shyam",31);

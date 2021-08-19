@@ -3,6 +3,8 @@
 
  Function: accumulate()
  Header file: numeric
+
+ Note: return type of the accumulate is int so it may give overflow value for the long long int value so be careful while using it.
  */
 #include <iostream>
 #include <algorithm>

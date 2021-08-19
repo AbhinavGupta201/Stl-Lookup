@@ -18,6 +18,7 @@ segtree Tree: This is a binary tree which store the data at the leaf of the bina
         1. set(i,v): set the a[i] with the value v
         2. query(l,r): perform the query in the range of [l,r)
 
+    Implementation: store the data at the root of the segment tree and in the form of the complete binary tree
 
 
 
@@ -49,6 +50,8 @@ struct segtree
     }
 
     // build the segment tree in O(n) time complexity as every node is visited exactly once 
+    // note: in the lx and rx
+    // [lx, rx)
     void build(vector<ll>&a, ll x, ll lx, ll rx){
         if(rx-lx==1){
             // to check if it a valid position of the vector array 
@@ -60,7 +63,7 @@ struct segtree
         ll m=(lx+rx)/2;
         build(a,2*x+1, lx, m);
         build(a, 2*x+2, m,rx);
-        seg[x]=seg[x+1]+seg[x+2];
+        seg[x]=seg[x+1]+seg[x+2]; // result of the child nodes 
     }
 
     void build(vector<ll>&a)
@@ -82,7 +85,7 @@ struct segtree
             set(i, v, 2 * x + 1, lx, m);
         else
             set(i, v, 2 * x + 2, m, rx);
-        seg[x]=seg[2*x+1]+seg[2*x+2];
+        seg[x]=seg[2*x+1]+seg[2*x+2]; // update the result of the segemnt tree
     }
 
     void set(ll i, ll val)
@@ -118,7 +121,7 @@ int main()
         cin>>v;
         st->set(i,v);
     }
-    st->print();
+    // st->print();
     ll q;
     cin>>q;
     while(q--){

@@ -28,7 +28,7 @@ Note: Position are:     b   a
         else do not 
 */
 int main(){
-        int arr[]={3,1};
+        int arr[]={3,1,6,4,6,2,1,4};
         int n=sizeof(arr)/sizeof(int);
 
         // For array on sorting 
