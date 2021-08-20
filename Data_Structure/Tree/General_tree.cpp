@@ -24,9 +24,9 @@ struct Tree
     vector<vector<item>> adj; // to store the adjencency list info i.e for adj[i][j] if there then there is a node front i to adj[i][j]
 
     // constructor
-    Tree(long long ver, long long rooted=1)
+    Tree(long long ver_count, long long rooted=1)
     {
-        n = ver;
+        n = ver_count;
         root = rooted;
         a.resize(n + 1, 0);
         adj.resize(n + 1);

@@ -83,7 +83,7 @@ struct Graph
         if (temp != NULL)
         {
             if (temp->data == y)
-                temp = NULL;
+                adj[x] = temp->next;
             else
             {
                 while (temp->next != NULL && temp->next->data != y)
@@ -99,7 +99,6 @@ struct Graph
                 }
             }
         }
-     
     }
 
     // add_value(): add value corresponding to the ith node
@@ -147,7 +146,7 @@ int main()
     G->add_edge(3, 4);
     G->add_edge(4, 5);
     G->add_edge(2, 3);
-    G->remove_edge(2, 3);
+    G->remove_edge(2, 1);
     G->add_value(1, 4);
     G->add_value(3, 5);
     G->add_value(5, 10);
