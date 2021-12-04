@@ -45,7 +45,7 @@ int main(){
         cout<<"key: "<<it.first<<" value: "<<it.second<<endl;
     }
 
-    // count(key): return the count of number of element with the key :: either 0 or 1
+    // count(key): return the count of number of element with the key 
     cout<<"count of abhinav"<<mp.count("shyam")<<endl;
     cout<<"count of mohig"<<mp.count("mohit")<<endl;
 

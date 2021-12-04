@@ -1,13 +1,13 @@
 /* 
 Unordered_map is similar to map but with
+
 Property:
 1. No order of storing the element (not dictionary )
 2. Only Single Key is allowed(not pair)
 3. Time complexity: O(1) in almost all cases except in worst case it is O(n)
 
 Note: every syntax and function is same 
-
- */
+*/
 #include<unordered_map>
 #include<iostream>
 using namespace std;
@@ -25,6 +25,9 @@ int main(){
     // emplace(): will also insert the key value pair 
     mp.emplace("ravi",29);
     mp.emplace("satyam",31);
+
+    // insert takes the pair of the element to be inserted
+    mp.insert(pair<string,int>("rakesh",200));
 
      // iteration
     for(auto it:mp){

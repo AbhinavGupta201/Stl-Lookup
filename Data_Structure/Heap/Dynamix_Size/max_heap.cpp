@@ -29,9 +29,9 @@ struct Heap
         arr = (item *)realloc(arr, (sizeof(item) * capacity));
     }
 
-    // insert the element in the heap
+    // push the element in the heap
     // Time -Complexity : O(logN)
-    void insert(int data)
+    void push(int data)
     {
         if (size == capacity)
         {
@@ -50,17 +50,17 @@ struct Heap
         }
     }
 
-    // peep(): return the top of the heap
+    // top(): return the top of the heap
     // Time-complexity : O(1);
-    item peep()
+    item top()
     {
         if (size == 0)
             return -1;
         return arr[0];
     }
 
-    // delete(): delete the root of the node
-    void delete_node()
+    // pop(): delete the root of the node always also can be seen as extract operation
+    void pop()
     {
         if (size == 0)
             return;
@@ -91,6 +91,40 @@ struct Heap
             i = temp;
         }
     }
+    //given the index of the heap array where it is not following the heap property. this opeation fix the heap
+    void heapify(int i)
+    {
+        int i, left, right;
+        while(i<size){
+            int res=i;
+            if(2*i+1<size && arr[2*i+1]>arr[res])
+                res=2*i+1;
+            if(2*i+2<size && arr[2*i+2]>arr[res])
+                res=2*i+2;
+            if(res==i)
+                break;
+            swap(arr[i],arr[res]);
+            i=res;
+        }
+    }
+
+    // increase_key(int i, int v): this operation increases the value at the index i of the array to the v
+    // only way of avoiding the heap property is on the top side since the value is increased
+    void increase_key(int i, int v){
+        arr[i]=v;
+        while (i!=0 && arr[(i-1)/2]<arr[i])
+        {
+            swap(arr[i], arr[(i-1)/2]);
+            i=(i-1)/2;
+        }
+    }
+
+    // delete(int i): this operation basically delete the ith node
+    // use the increasekey to make it's value maximum so that it reaches to the top and then by calling the extract min we will extract it.
+    void delete_key(int i){
+        increase_key(i, 1000000007);
+        pop();
+    }
 
     // print the heap
     void print()
@@ -107,25 +141,23 @@ struct Heap
     {
         return (size == 0);
     }
-
-
 };
 
 int main()
 {
     Heap *hp = new Heap();
-    hp->insert(10);
-    hp->insert(1);
-    hp->insert(3);
-    hp->insert(5);
-    hp->insert(2);
-    hp->insert(6);
-    hp->insert(4);
+    hp->push(10);
+    hp->push(1);
+    hp->push(3);
+    hp->push(5);
+    hp->push(2);
+    hp->push(6);
+    hp->push(4);
     cout << "size: " << hp->size << endl;
     cout << "empty: " << hp->empty() << endl;
     hp->print();
-    cout << hp->peep() << endl;
-    hp->delete_node();
+    cout << hp->top() << endl;
+    hp->pop();
     hp->print();
     cout << "size: " << hp->size << endl;
     cout << "empty: " << hp->empty() << endl;
